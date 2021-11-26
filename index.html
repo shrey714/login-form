@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#2a71bb">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<!-- preloader start-->
+<div class="loader">
+    <div class="wrapper">
+        <div class="circle">
+          <div class="yinyang"></div>
+          <div class="yinyang"></div>
+        </div>
+      </div>
+</div>
+<!-- preloader end-->
+<div class="mainbody">
+    <!-- wave frame start-->
+    <div class="wave_frame">
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <!-- wave frame end-->
+    <div id="login_form">
+        <div id="login_text">
+            LOGIN FORM
+        </div>
+        <div id="login_field">
+            <form onsubmit="login()" id="loginform">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+                <span class="line line4"></span>
+                <span id="error" style="color:red"></span>
+                <div class="custom-field">
+                    <input autocomplete="off" id="email" type="text" class="email" placeholder="Email" required />
+                </div>
+                <div class="custom-field">
+                    <input id="password" type="password" class="password" placeholder="Password" required />
+                </div>
+                <a href="#" class="forgot_password" onclick="forgotpass()">Forgot Password</a>
+                <div class="buttons">
+                    <figure class="swing swing_left">
+                        <button type="submit" class="btn btn_loading" data-loading-text="..." ><span class="btn_text">Login</span></button>
+                    </figure>
+                    <figure class="swing swing_right">
+                        <button onclick="SignUp()" class="btn btn_loading" data-loading-text="..." ><span class="btn_text">SignUp</span></button>
+                    </figure>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="./resources/firebase.js"></script>
+    <script src="index.js"></script>
+    <script src="./resources/loader.js"></script>
+</body>
+</html>
