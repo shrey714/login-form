@@ -8,7 +8,7 @@
 }
 body {
   margin:0;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@ body {
 .waves {
   position:relative;
   width: 100%;
-  height:15vh;
+  height:100px;
   margin-bottom:-7px; /*Fix for safari gap*/
   min-height:100px;
   max-height:150px;
@@ -67,9 +67,9 @@ body {
 /* wave frame end */
 #login_form {
     margin: auto;
-    margin-top: 6vh;
+    margin-top: 32px;
     width: 558px;
-    height: 66vh;
+    height: 349px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -103,22 +103,22 @@ form{
     box-shadow: rgb(0 0 0 / 31%) 5px 1px 4px;
 }
 .line1{
-  height: 10vh;
+  height: 52.4px;
   margin-left: -388px;
 }
 .line2{
-  height: 10vh;
+  height: 52.4px;
   position: absolute;
   margin-left: -35px;
 }
 .line3 {
-  height: 26vh;
+  height: 137.4px;
   position: absolute;
   margin-right: -329px;
 }
 .line4 {
-  height: 10vh;
-  margin-top: 16vh;
+  height: 54px;
+  margin-top: 83.9px;
   position: absolute;
   margin-right: -23px;
 }
@@ -134,7 +134,7 @@ form{
 }
 .email{
   width: 280px;
-  height: 6vh;
+  height: 32.16px;
   outline: none;
   border: 2px solid #000;
   border-radius: 5px;
@@ -144,18 +144,18 @@ form{
 }
 .password{
   width: 250px;
-  height: 6vh;
+  height: 32.16px;
   outline: none;
   border: 2px solid #000;
   border-radius: 5px;
   margin-left: 177px;
   padding: 12px;
-  margin-top: 10vh;
+  margin-top: 53.1px;
   box-shadow: rgb(0 0 0 / 24%) 6px 6px 4px;
 }
 .buttons {
   display: flex;
-  margin-top: 7vh;
+  margin-top: 37px;
 }
 .swing {
     animation: swing ease-in-out 1s infinite alternate;
@@ -217,7 +217,7 @@ form{
 
 
 .loader{
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   overflow: hidden;
   background-color:rgba(93, 91, 91, 0.952);
@@ -319,12 +319,12 @@ form{
 }
 @media (max-width: 677px) {
   #login_form {
-    margin-top: 5vh;
+    margin-top: 29px;
     width: 94%;
-    height: 68vh;
+    height: 400px;
   }
   .buttons {
-    margin-top: 9vh;
+    margin-top: 52px;
 }
 .swing_left {
   margin-left: 1vw;
