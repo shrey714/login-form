@@ -5,7 +5,7 @@ document.getElementById("loginform").addEventListener("submit", (event) => {
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        location.replace("../redirect/welcome.html")
+        location.replace("./redirect/welcome.html")
         var uid = user.uid;
     } else {
         // User is signed out
