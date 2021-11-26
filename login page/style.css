@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+body {
+  margin:0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+
+
+/* wave frame start */
+.wave_frame {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/* wave frame end */
+#login_form {
+    margin: auto;
+    margin-top: 6vh;
+    width: 558px;
+    height: 66vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+#login_text{
+    width: 100%;
+    background-color: brown;
+    height: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 27px;
+}
+#login_field{
+    width: 100%;
+    height: 86%;
+}
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.line{
+    background: brown;
+    width: 7px;
+    box-shadow: rgb(0 0 0 / 31%) 5px 1px 4px;
+}
+.line1{
+  height: 10vh;
+  margin-left: -388px;
+}
+.line2{
+  height: 10vh;
+  position: absolute;
+  margin-left: -35px;
+}
+.line3 {
+  height: 26vh;
+  position: absolute;
+  margin-right: -329px;
+}
+.line4 {
+  height: 10vh;
+  margin-top: 16vh;
+  position: absolute;
+  margin-right: -23px;
+}
+
+#error {
+  position: absolute;
+  color: red;
+  margin-top: 17px;
+  padding: 0 2px 0 3px;
+  border-radius: 3px;
+  background: #0000002b;
+  box-shadow: rgb(0 0 0 / 24%) 5px 1px 4px;
+}
+.email{
+  width: 280px;
+  height: 6vh;
+  outline: none;
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin-left: -205px;
+  padding: 12px;
+  box-shadow: rgb(0 0 0 / 24%) 6px 6px 4px;
+}
+.password{
+  width: 250px;
+  height: 6vh;
+  outline: none;
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin-left: 177px;
+  padding: 12px;
+  margin-top: 10vh;
+  box-shadow: rgb(0 0 0 / 24%) 6px 6px 4px;
+}
+.buttons {
+  display: flex;
+  margin-top: 7vh;
+}
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.swing a {
+    border: 5px solid #f8f8f8;
+    display: block;
+}
+.swing:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid #323232;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+.swing_left{
+  margin-left: -246px;
+}
+.swing_right{
+  margin-left: 47px;
+}
+/* nail */
+.swing:before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: -16px;
+  left: 60%;
+  z-index: 5;
+  border-radius: 50% 50%;
+  background: #000;
+}
+.forgot_password {
+  margin-top: 7px;
+  margin-right: -309px;
+  text-shadow: rgb(0 0 0 / 48%) 6px 4px 4px;
+}
+ .btn{
+  height: 33px;
+  width: 73px;
+  cursor: pointer;
+ }
+
+
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+
+
+
+.loader{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color:rgba(93, 91, 91, 0.952);
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.wrapper {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
+}
+.circle {
+  box-sizing: border-box;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  padding-left: 50px;
+  background-image: linear-gradient(to 
+    left, #fff, #fff 50%, #000 50%, #000);
+  animation: roll 10s linear infinite;
+}
+
+.yinyang {
+  position: relative;
+  background: #fff;
+  height: 100px;
+  width: 100px; 
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to left, #fff, #fff 50%, #000 50%, #000);
+  animation: roll 4s linear infinite;
+  animation-direction: reverse;
+} 
+
+.yinyang:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  background: #fff;
+  border: 18px solid #000;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+ }
+
+.yinyang:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translatex(-50%);
+  background: #000;
+  border: 18px solid #fff;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+}
+
+@keyframes roll {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(-360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 115px;
+    min-height: 66px
+  }
+}
+@media (max-width: 677px) {
+  #login_form {
+    margin-top: 5vh;
+    width: 94%;
+    height: 68vh;
+  }
+  .buttons {
+    margin-top: 9vh;
+}
+.swing_left {
+  margin-left: 1vw;
+}
+.forgot_password {
+  margin-right: -48vw;
+}
+.password {
+  width: 63vw;
+  margin-left: 19vw;
+}
+.email {
+  width: 70vw;
+  margin-left: -19vw;
+}
+.line1 {
+  margin-left: -58vw;
+}
+.line2 {
+  margin-left: 21vw;
+}
+.line3 {
+  margin-right: -64vw;
+}
+.line4 {
+  margin-right: 26vw;
+}
+}
